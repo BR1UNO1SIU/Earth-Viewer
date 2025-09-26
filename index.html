@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Earth Viewer</title>
+        <meta name="description" content="Earth Viewer">
+        <meta name="author" content="HHMI">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="robots" content="nofollow,noindex">
+        <style>
+            @import url(dist/Cesium-1.14/Cesium/Widgets/widgets.css);
+        </style>
+
+        <link rel="stylesheet" href="dist/css/earthviewer.css">
+    </head>
+    <body>
+        <div id="main_splashscreen">
+            <div id="main_loadprogress">Loading...</div>
+        </div>
+        <div id="main_header"><div id="main_titleblock"></div><div id="main_BILogo"></div></div>
+        <div id="main_sidebarleft"></div>
+
+        <div id="cesiumContainer"></div>
+        <div id="main_hud"></div>
+        <div id="main_legend"></div>
+        <div id="main_sectiontext"></div>
+
+        <div id="main_chart_wrapper">
+            <div id="main_chart2" class="main-chart"></div>
+            <div id="main_chart1" class="main-chart"></div> 
+        </div>
+
+        <!-- DEBUG
+        <div id="testOut" style="position:absolute;bottom:40px;left:270px;padding:10px;margin:10px;color:#fff;background-color: rgba(59, 84, 124, 0.5);z-index:9700;"></div> -->
+        
+        <div id="info_overlay">
+          <img id="info_overlay_close" src="Resources/ui.bundle/close.png"/>
+          <div id="info_overlay_content_wrapper">
+              <iframe id="info_overlay_content" scrolling="no">
+              </iframe>
+          </div>
+          <div id="info_overlay_dismiss_wrapper">
+              <input id="hide_check" type="checkbox" name="hidetutorial" value="hide" /> do not show this tutorial again
+              <div id="info_overlay_dismiss_button"></div>
+          </div>
+        </div>
+
+        <div id="main_footer">
+            <div id="footer_playback" class="footer-content">
+                <div id="vcr_rev" class="vcr-ctrl" data-playspeed="1"></div>
+                <div id="vcr_pause" class="vcr-ctrl active" data-playspeed="0"></div>
+                <div id="vcr_fwd" class="vcr-ctrl" data-playspeed="-1"></div>
+            </div>
+            <img class="footer-content ev-logo" src="dist/img/earth-viewer.png"/>
+            <div id="footer_menubox" class="footer-content"></div>
+        </div>
+
+        <!--<div id="fps"></div>-->
+
+
+        <script src="dist/jquery-2.1.3.min.js"></script>
+        <script src="dist/Highcharts-4.0.4/js/highcharts.js"></script>
+        <script src="dist/Cesium-1.14/Cesium/Cesium.js"></script>
+        <script src="dist/js/earthviewer.js"></script>
+        <script src="dist/dragdealer.js"></script>
+    </body>
+</html>
